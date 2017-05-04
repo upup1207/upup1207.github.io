@@ -1,0 +1,112 @@
+$colorweb:#fd0049;
+$colorbg: #252627;
+$colortextbar:#b7b7b7;
+$colortext:#666666;
+$colorwebfondo:#0374ad;
+$colorgris:#d9d9d9;
+$colorcelest:#3dc5ec;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Source+Serif+Pro');
+
+$fontopenpro:'Source Serif Pro', serif;
+$fontopensans: 'Open Sans', sans-serif;
+$fontopenbree: 'Bree Serif', serif;
+$fontopenraleway:'Raleway', sans-serif;
+
+
+$fontopensemi:'open_sanssemibold';
+$fontopenbold:'open_sansbold';
+$fontopenlight:'open_sanslight';
+$fonthbold:'Helvetica Neuebold';
+$fonththin:'Helvetica Neue Thin';
+$fonthelveticabold:'helveticabold';
+$fonthelveticathin:'helveticathin';
+
+@mixin grid-result($msize,$psize){
+  margin-left:$msize;/*siempre negativo or 0 */
+  margin-right:$msize;/*siempre negativo or 0 */
+  >div{
+    padding-left:$psize;
+    padding-right:$psize;
+  }
+}
+@mixin grid-item-size($width){
+  width:$width;
+}
+@mixin ancho($width, $maxwidth) {
+    max-width: $maxwidth;
+    width: $width;
+}
+@mixin center-flex($display,$justify-content,$align-items){
+    display: $display;
+    justify-content:$justify-content;
+    align-items:$align-items;
+}
+ @mixin bp($point) {
+   @if $point == desktop {
+     @media (min-width: 75em) { @content ; }
+  }
+   @else if $point == tabletland {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 48em) { @content ; }
+  }
+    @else if $point == mobilelandscape {
+     @media (min-width: 40em) { @content ; }
+  }
+  /* @else if $point == mobilelandscape {
+     @media (min-width: 560px)  { @content ; }
+  }*/
+  @else if $point == mobile {
+     @media (max-width: 480px)  { @content ; }
+
+  }
+}
+@mixin each($num) {
+  &:nth-child(#{$num}n) {
+    @content;
+  }
+}
+@mixin n-between($num, $first) {
+  &:nth-child(#{$num}n):nth-child(n + #{$first}) {
+    @content;
+  }
+}
+.dp-flex{
+  display: flex;
+}
+.dp-flex-justify-center{
+  display: flex;
+  justify-content: center;
+}
+.dp-flex-justify-end{
+  display: flex;
+  justify-content:flex-end;
+}
+.dp-flex-justify-between{
+  display: flex;
+  justify-content: space-between;
+}
+.dp-flex-justify-around{
+  display: flex;
+ justify-content:space-around;
+}
+.center-absolute{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.center-vertical{
+  display: flex;
+  align-items:center;
+}
+.center-position-absolute{
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+}

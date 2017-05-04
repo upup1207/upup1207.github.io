@@ -1,0 +1,39 @@
+html,body{
+    min-height: 100vh;
+}
+html{
+    font-size: 87.5%;
+    @include bp(tablet){
+        font-size: 100%;
+    }
+    @include bp(desktop){
+        font-size: 18px;
+    }
+}
+body{
+    font:100%/1.5 ;
+    transition: all 0.35s ease;
+}
+p{
+    font-size: 1rem;
+}
+*{
+    font-family: $fontopenraleway;
+    font-weight: 600;
+}
+.btn-ref{
+    text-transform: uppercase;
+    border: 1px solid #212121;
+    display: block;
+    color:#000;
+    border-radius:3px 3px 3px 3px;
+    padding:10px 10px;
+}
+#demo-canvas{
+    position:fixed;
+    z-index: 200;
+}
+.hidde_sec{
+    position: relative;
+    z-index: 300;
+}

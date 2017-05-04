@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://file.myfontastic.com/mwwxWschdxdygSiNLMjVYd/icons.css" rel="stylesheet"/>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <button class="btn-nav"><i></i><i></i><i> </i></button>
+  </header>
+  <nav class="navigation">
+    <ul class="list_navigator">
+      <li><a href="#large-header" rel="">hello</a></li>
+      <li><a href="#page2" rel="">about</a></li>
+      <li><a href="#page4" rel="">portfolio</a></li>
+      <li><a href="#page5" rel="">contact</a></li>
+    </ul>
+  </nav>
+  <canvas id="demo-canvas"></canvas>
+  <div class="container"> 
+    <main>
+      <section class="large-header hidde_sec active_sec" id="large-header">
+        <div class="content_me">
+          <div class="tittle"> 
+            <h1 class="tittle-animation">jose mendoza</h1>
+            <p class="tittle-animation tittle_dev">front end developer</p>
+          </div>
+        </div>
+      </section>
+      <section class="made-cnt common_sec hidde_sec" id="page2">
+        <div class="left_about">
+          <div class="description_about fadeInLeft">
+            <h2>Hola</h2>
+            <p>Soy un desarrollador Front-end, fascinado con  lo que se puede lograr usando lenguajes como html,css,javascript y tener como resultados grandes diseños adaptables en diversos dispositivos para satisfacer las necesidades del cliente.</p>
+          </div>
+          <div class="photo fadeInTop"><img src="images/pp.jpg" alt=""/></div>
+        </div>
+        <ul class="skills_site_about fadeInRight">
+          <li><i class="icon-wrench"></i>
+            <h3>desarrollo</h3>
+            <ul class="about_skills">
+              <li>html5</li>
+              <li>css3</li>
+              <li>sass/stylus</li>
+              <li>javascript</li>
+              <li>jquery</li>
+              <li>photoshop</li>
+              <li>bootstrap</li>
+              <li>wordpress</li>
+            </ul>
+          </li>
+          <li><i class="icon-flow-branch"></i>
+            <h3>workflow</h3>
+            <ul class="about_skills">
+              <li>git</li>
+              <li>gulp</li>
+              <li>livereload</li>
+              <li>autoprefixer</li>
+              <li>npm</li>
+              <li>js hint</li>
+              <li>css lint</li>
+              <li>plugins</li>
+              <li>testing</li>
+            </ul>
+          </li>
+          <li><i class="icon-cogs"></i>
+            <h3>tecnicas</h3>
+            <ul class="about_skills"> 
+              <li>Correcta semantica SEO</li>
+              <li>optimizacion</li>
+              <li>Perfect pixel</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="skills_site common_sec hidde_sec" id="page3"></section>
+      <section class="portfolio_site common_sec hidde_sec" id="page4"></section>
+      <section class="contact_site common_sec hidde_sec" id="page5">
+        <div class="contact_bloq">
+          <h4>contact me </h4>
+          <form class="form_contact">
+            <ul class="list_cnt_contact">
+              <li>
+                <input type="text" placeholder="name"/>
+              </li>
+              <li>
+                <input type="text" placeholder="email"/>
+              </li>
+              <li>
+                <input type="text" placeholder="subject"/>
+              </li>
+              <li>
+                <textarea type="text" placeholder="message"></textarea>
+              </li>
+              <li>
+                <button class="contact_form_btn">enviar</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/jquery.min.js">  </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/app.js">     </script>
+</body>
