@@ -74,7 +74,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   html::-webkit-scrollbar {
-    width: 8px; }
+    width: 8px;
+    background: #252627; }
   html::-webkit-scrollbar-thumb {
     background: #fd0049; }
 

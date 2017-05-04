@@ -9,7 +9,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     &::-webkit-scrollbar {
         width: 8px;
-        // background:$colorbg;
+        background:$colorbg;
     }
 
     &::-webkit-scrollbar-thumb {
