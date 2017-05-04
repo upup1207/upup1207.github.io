@@ -332,14 +332,15 @@ to { border-color: $colorweb; }
     color:#fff;
     padding: 50px 10px 0 10px;
     @include bp(tablet){
-        max-width: 90%;
-        padding: 0;
+        margin:0 auto;
+        padding: 0 2rem;
        p{
            margin-bottom: 10px;
        }
     }
     @include bp(desktop){
         max-width:1000px;
+        padding:0 0;
     }
 }
 /* Header Canvas*/
@@ -423,6 +424,69 @@ to { border-color: $colorweb; }
             }
             &:focus{
                 border-bottom:2px solid $colorweb;
+            }
+        }
+    }
+}
+.portfolio_site{
+    @include bp(desktop){
+        max-width: 80%;
+    }
+}
+.grid_portfolio{
+    display: flex;
+    overflow-x:hidden;
+    padding:10px 0;
+    flex-wrap:wrap;
+    @include bp(tablet){
+        padding:4rem 0;
+        justify-content: space-between;
+    }
+    @include bp(desktop){
+        li{
+            width: 48%;
+        }
+    }
+    li{
+        margin-bottom: 1rem;
+        overflow:hidden;
+        img{
+            width: 100%;
+            transition:all 0.5s ease;
+            max-height: 350px;
+        }
+        a{
+            display: block;
+            position: relative;
+            >span{
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                position: absolute;
+                left:0;
+                letter-spacing: 0.5rem;
+                color:$colorweb;
+                top: 0;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                background-color:rgba(37, 38, 39, 0.9);
+                width: 100%;
+                opacity:0;
+                transform:rotateX(-180deg);
+                height: 100%;
+                transition:all 0.5s ease;
+                h4{
+                    font-weight: bold;
+                }
+            }
+        }
+        &:hover{
+            img{
+                transform:scale(1.2);
+            }
+            span{
+                opacity:1;
+                transform:rotateX(0);
             }
         }
     }
