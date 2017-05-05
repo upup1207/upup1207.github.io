@@ -192,7 +192,7 @@ button, input, select {
   height: 0; }
   .navigation > ul {
     height: 100%;
-    background-color: #252627;
+    background-color: rgba(37, 38, 39, 0.9);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -260,7 +260,6 @@ header {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   top: 0;
-  background-color: transparent;
   left: 0;
   width: 100%;
   display: -webkit-box;
@@ -790,6 +789,7 @@ header {
 
 /* Header Canvas*/
 .large-header {
+  min-height: 100vh;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -884,6 +884,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: transparent;
   overflow-x: hidden;
   padding: 10px 0;
   -ms-flex-wrap: wrap;
@@ -1024,12 +1025,21 @@ p {
   border-radius: 3px 3px 3px 3px;
   padding: 10px 10px; }
 
-#demo-canvas {
-  position: fixed;
-  z-index: 200; }
-
 .hidde_sec {
   position: relative;
   z-index: 300; }
+
+/* ---- particles.js container ---- */
+#stats {
+  display: none !important; }
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=../maps/style.css.map */

@@ -13,7 +13,7 @@
     }
 }
 .tittle{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     h1{
         text-transform: uppercase;
         color:#fff;
@@ -52,7 +52,7 @@
     height: 0;
     >ul{
         height: 100%;
-        background-color:$colorbg;
+        background-color:rgba(37, 38, 39, 0.9);
         display: flex;
         position: relative;
         flex-direction:column;
@@ -110,7 +110,6 @@ header{
     height: 50px;
     transition:all 0.5s ease;
     top: 0;     
-    background-color:transparent; 
     left: 0;
     width: 100%;
     display: flex;
