@@ -154,7 +154,7 @@ button, input, select {
     line-height: 25px; }
 
 .tittle {
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
   .tittle h1 {
     text-transform: uppercase;
     color: #fff;
@@ -211,6 +211,7 @@ button, input, select {
       .navigation > ul li a {
         color: #fff;
         height: 5rem;
+        letter-spacing: 0.2rem;
         width: 100%;
         font-size: 2rem;
         display: -webkit-box;
@@ -238,7 +239,7 @@ button, input, select {
   height: 100%;
   opacity: 1;
   top: 0;
-  z-index: 500; }
+  z-index: 400; }
   @media (min-width: 48em) {
     .view_nav {
       left: 80px;
@@ -448,7 +449,7 @@ header {
               flex-direction: row; } }
 
 .description_about > h2 {
-  font-weight: 600;
+  font-weight: 250;
   margin-bottom: 20px;
   color: #fd0049;
   font-size: 4rem; }
@@ -676,7 +677,9 @@ header {
   margin: 0 auto; }
   .photo img {
     border-radius: 50%;
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    z-index: 250; }
   @media (min-width: 48em) {
     .photo {
       -webkit-box-ordinal-group: 1;
@@ -927,7 +930,8 @@ header {
       position: relative;
       -webkit-transition: all 0.25s ease;
       transition: all 0.25s ease;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      z-index: 300; }
       .list_cnt_contact li input::-webkit-input-placeholder, .list_cnt_contact li textarea::-webkit-input-placeholder {
         text-transform: capitalize; }
       .list_cnt_contact li input:-ms-input-placeholder, .list_cnt_contact li textarea:-ms-input-placeholder {
@@ -965,7 +969,9 @@ header {
       width: 48%; } }
   .grid_portfolio li {
     margin-bottom: 1rem;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative;
+    z-index: 250; }
     .grid_portfolio li img {
       width: 100%;
       -webkit-transition: all 0.5s ease;
@@ -1041,7 +1047,8 @@ header {
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
     width: 100%;
-    position: relative; }
+    position: relative;
+    z-index: 200; }
     .cnt_button_contact .contact_form_btn:before, .cnt_button_contact .contact_form_btn:after {
       box-sizing: border-box;
       content: '';
@@ -1157,8 +1164,7 @@ p {
   padding: 10px 10px; }
 
 .hidde_sec {
-  position: relative;
-  z-index: 450; }
+  position: relative; }
 
 /* ---- particles.js container ---- */
 #stats {
@@ -1166,7 +1172,7 @@ p {
 
 #particles-js {
   width: 100%;
-  z-index: 400;
+  z-index: 200;
   height: 100%;
   position: fixed;
   background-image: url("");
