@@ -213,7 +213,7 @@ button, input, select {
       width: 100%; }
       .navigation > ul li a {
         color: #fff;
-        height: 4rem;
+        height: 5rem;
         width: 100%;
         font-size: 2rem;
         display: -webkit-box;
@@ -230,9 +230,6 @@ button, input, select {
         background-color: #FFF; }
         .navigation > ul li:hover a {
           color: #fd0049; }
-      @media (min-width: 48em) {
-        .navigation > ul li a {
-          font-size: 25px; } }
   @media (min-width: 48em) {
     .navigation {
       top: 0;
