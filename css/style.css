@@ -145,11 +145,8 @@ button, input, select {
 
 .content_me {
   padding: 0 10px;
-  position: absolute;
   max-width: 700px;
-  left: 0;
   margin: 0 auto;
-  right: 0;
   text-align: center; }
   .content_me > p {
     margin-top: 15px;
