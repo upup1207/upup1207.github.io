@@ -96,7 +96,7 @@ to { border-color: $colorweb; }
 }
 .description_about{
     >h2{
-        font-weight: 600;
+        font-weight: 250;
         margin-bottom: 20px;
         color:$colorweb;
         font-size: 4rem;
@@ -176,6 +176,31 @@ to { border-color: $colorweb; }
         transform: translateY(0);
     }
 }
+.fadeInBottom{
+    animation-name:fadeInBottom;
+    animation-duration:1.7s;
+}
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+        z-index:-1;
+    }
+    40%{
+        transform:translateY(40px);
+    }
+    60%{
+        transform:translateY(20px);
+    }
+    90%{
+        transform:translateY(5px);
+    }
+     20%,50%,80%,100% {
+        opacity: 1;
+        z-index:100;
+        transform: translateY(0);
+    }
+}
 .fadeInRight{
     animation-name:fadeInRight;
     animation-duration:1.5s;
@@ -199,6 +224,8 @@ to { border-color: $colorweb; }
     img{
         border-radius: 50%;
         width: 100%;
+        position: relative;
+        z-index: 250;
     }
     @include bp(tablet){
         order:0;
@@ -422,27 +449,55 @@ to { border-color: $colorweb; }
 .contact_bloq{
     >h4{
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: 3rem;
+        margin-bottom:2.5rem;
         font-weight: bold;
+        text-align: center;
     }
 }
 .list_cnt_contact{
     margin-top: 20px;
     li{
+        position:relative;
         color:red;
+        span{
+            display: block;
+            content:'';
+            transition:all 0.2s ease;
+            width: 0;
+            position: absolute;
+            bottom:15px;
+            left: 0;
+            height: 2px;
+            background-color: $colorweb;
+            z-index: 300;
+        }
         input,textarea{
+            resize:none;
             width: 100%;
             border:none;
             margin-bottom: 15px;
             padding: 10px 10px;
-            border-bottom:2px solid grey;
+            position: relative;
+            transition:all 0.25s ease;
             font-size: 1.5rem;
+            z-index: 300;
             &::placeholder{
                 text-transform: capitalize;
             }
             &:focus{
-                border-bottom:2px solid $colorweb;
+                & ~ span{
+                    width: 100%;
+                }
             }
+        }
+        textarea{
+            height: 8rem;
+        }
+    }
+    .cnt_textarea{
+        span{
+            bottom:18px;
         }
     }
 }
@@ -469,6 +524,8 @@ to { border-color: $colorweb; }
     li{
         margin-bottom: 1rem;
         overflow:hidden;
+        position: relative;
+        z-index: 250;
         img{
             width: 100%;
             transition:all 0.5s ease;
@@ -507,6 +564,94 @@ to { border-color: $colorweb; }
                 opacity:1;
                 transform:rotateX(0);
             }
+        }
+    }
+}
+.contact_site{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 0;
+}
+.contact_bloq{
+    width: 100%;
+    @include bp(tablet){
+        max-width: 60%;
+        margin: 0 auto;
+    }
+}
+.cnt_button_contact{
+    max-width: 40%;
+    margin:0 auto;
+    .contact_form_btn{
+        display: block;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        background-color:$colorweb;
+        color:#fff;
+        text-transform: uppercase;
+        transition:all 0.25s ease;
+        width: 100%;
+        position:relative;
+        z-index: 200;
+          &:before,&:after
+             {
+                box-sizing: border-box;
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+	         }
+            &:before,&:after 
+                {
+                    border: 2px solid transparent; // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+                    width: 0;
+                    height: 0;
+                }
+        	  // This covers the top & right borders (expands right, then down)
+            &:before {
+                top: 0;
+                left: 0;
+            }
+
+            // And this the bottom & left borders (expands left, then up)
+            &:after {
+                bottom: 0;
+                right: 0;
+            }
+         &:hover{
+             background-color: transparent;
+             color:$colorweb;
+                &:before,&:after{
+                    width: 100%;
+                    height: 100%;
+                }
+                &:hover:before {
+                    border-top-color: $colorweb; // Make borders visible
+                    border-right-color: $colorweb;
+                    transition:
+                    width 0.25s ease-out, // Width expands first
+                    height 0.25s ease-out 0.25s; // And then height
+                }
+
+                &:hover:after {
+                    border-bottom-color: $colorweb; // Make borders visible
+                    border-left-color: $colorweb;
+                    transition:
+                    border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+                    width 0.25s ease-out 0.5s, // And then exanding width
+                    height 0.25s ease-out 0.75s; // And finally height
+                }
+         }
+    }
+}
+.test-grid{
+    @include grid-result(-15px,15px,30%);
+    li{
+        img{
+            width: 100%;
         }
     }
 }

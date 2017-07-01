@@ -31,7 +31,6 @@ p{
 }
 .hidde_sec{
     position: relative;
-    z-index: 300;
 }
 /* ---- particles.js container ---- */
 #stats{
@@ -39,6 +38,7 @@ p{
 }
 #particles-js{
   width: 100%;
+  z-index: 200;
   height: 100%;
   position: fixed;
   background-image: url('');

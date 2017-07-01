@@ -26,10 +26,13 @@ $fonththin:'Helvetica Neue Thin';
 $fonthelveticabold:'helveticabold';
 $fonthelveticathin:'helveticathin';
 
-@mixin grid-result($msize,$psize){
+@mixin grid-result($msize,$psize,$wli){
+  display:flex;
+  flex-wrap:wrap;
   margin-left:$msize;/*siempre negativo or 0 */
   margin-right:$msize;/*siempre negativo or 0 */
-  >div{
+  >li{
+    width:$wli;
     padding-left:$psize;
     padding-right:$psize;
   }
